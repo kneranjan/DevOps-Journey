@@ -3,7 +3,7 @@ DevOps Journey
 Here is everything I have learned and created in this journey.
 
 Shell Scripts
-1) `gen_folder_and_2_files.sh`
+1) `create_folder_and_files.sh`
 
 A shell script that creates a new directory and automatically generates two files inside it.
 
