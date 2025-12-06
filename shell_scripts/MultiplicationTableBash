@@ -1,0 +1,15 @@
+#!/bin/bash
+############
+#author:Niranjan Hanchate
+#Date:06/12/25
+#Shell script to take number from user and print its multiplication table from 1 to 10
+############
+
+echo "Enter a number to print its multiplication table"
+read num
+
+for i in {1..10}
+do
+        echo "$num * $i =$(($num*$i)) "
+
+done
