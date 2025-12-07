@@ -1,0 +1,28 @@
+#!/bin/bash
+##############
+#author:Niranjan
+#Date:07/12/25
+# shell script to report the aws resource usage
+##############
+set -x  #debug mode
+#AWS S3
+#AWS EC2
+#AWS Lambda
+#AWS IAM Users
+
+
+# list the S3 Buckets
+echo "Here are the S3 Buckets:"
+aws s3 ls > resourceTracker
+
+#list EC2 instances
+echo "Here are the EC2 instance id(s):"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+#list Lambda
+echo "Here are the Lambda functions:"
+aws lambda list-functions >> resourceTracker
+
+#list IAM users
+echo "Here are the IAM Users:"
+aws iam list-users
